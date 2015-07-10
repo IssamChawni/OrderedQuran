@@ -4,7 +4,7 @@
 	<xsl:template match="/">
 		<html dir="rtl">
 			<head>
-				<link type="text/css" rel="stylesheet" href="stylesheet/style.css" />
+				<link type="text/css" rel="stylesheet" href="stylesheets/style.css" />
 			</head>
 			<body>
 				<xsl:for-each select="quran/sura">
