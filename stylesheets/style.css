@@ -65,7 +65,7 @@ body {
 }
 
 .surat .versets .num-hizb {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	color: red;
 	position: absolute;
 	right: 1rem;
@@ -74,7 +74,7 @@ body {
 }
 
 .surat .versets .num-nisf {
-	font-size: 1rem;
+	font-size: 0.75rem;
 	color: red;
 	position: absolute;
 	right: 1rem;
@@ -83,7 +83,7 @@ body {
 }
 
 .surat .versets .num-rubu {
-	font-size: 1rem;
+	font-size: 0.5rem;
 	color: green;
 	position: absolute;
 	right: 1rem;
