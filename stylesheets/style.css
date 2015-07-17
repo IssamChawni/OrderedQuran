@@ -82,6 +82,15 @@ body {
 	border-radius: 1em;
 }
 
+.surat .versets .num-rubu {
+	font-size: 1rem;
+	color: green;
+	position: absolute;
+	right: 1rem;
+	width: 3em;
+	border-radius: 1em;
+}
+
 .surat .versets .num-tomon {
 	font-size: 1.5rem;
 	color: blue;

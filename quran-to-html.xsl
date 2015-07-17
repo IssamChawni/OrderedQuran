@@ -25,6 +25,10 @@
        									 <span class="num-nisf"><xsl:value-of select="./nisf/@index" /></span>
        									 <hr/>
    									</xsl:if>
+   									<xsl:if test="rubu">
+       									 <span class="num-rubu"><xsl:value-of select="./rubu/@index" /></span>
+       									 <hr/>
+   									</xsl:if>
    									<xsl:if test="tomon">
        									 <span class="num-tomon">
        									 	<xsl:value-of select="./tomon/@index" />
