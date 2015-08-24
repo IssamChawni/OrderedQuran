@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="10" name="الفجر">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="10" name="الفجر">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالْفَجْرِ"/>
     <aya index="2" text="وَلَيَالٍ عَشْرٍ"/>
     <aya index="3" text="وَالشَّفْعِ وَالْوَتْرِ"/>
@@ -29,4 +31,4 @@
     <aya index="28" text="ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَرْضِيَّةً"/>
     <aya index="29" text="فَادْخُلِي فِي عِبَادِي"/>
     <aya index="30" text="وَادْخُلِي جَنَّتِي"/>
-  </sura></sura>
+  </sura></quran>

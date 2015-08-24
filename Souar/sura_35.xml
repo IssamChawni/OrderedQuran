@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="35" name="البلد">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="35" name="البلد">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ"/>
     <aya index="2" text="وَأَنْتَ حِلٌّ بِهَٰذَا الْبَلَدِ"/>
     <aya index="3" text="وَوَالِدٍ وَمَا وَلَدَ"/>
@@ -19,4 +21,4 @@
     <aya index="18" text="أُولَٰئِكَ أَصْحَابُ الْمَيْمَنَةِ"/>
     <aya index="19" text="وَالَّذِينَ كَفَرُوا بِآيَاتِنَا هُمْ أَصْحَابُ الْمَشْأَمَةِ"/>
     <aya index="20" text="عَلَيْهِمْ نَارٌ مُؤْصَدَةٌ"/>
-  </sura></sura>
+  </sura></quran>

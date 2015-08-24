@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="32" name="الهمزة">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="32" name="الهمزة">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَيْلٌ لِكُلِّ هُمَزَةٍ لُمَزَةٍ"/>
     <aya index="2" text="الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ"/>
     <aya index="3" text="يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ"/>
@@ -8,4 +10,4 @@
     <aya index="7" text="الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ"/>
     <aya index="8" text="إِنَّهَا عَلَيْهِمْ مُؤْصَدَةٌ"/>
     <aya index="9" text="فِي عَمَدٍ مُمَدَّدَةٍ"/>
-  </sura></sura>
+  </sura></quran>

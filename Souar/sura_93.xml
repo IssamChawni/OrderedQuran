@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="93" name="الزلزلة">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="93" name="الزلزلة">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا"/>
     <aya index="2" text="وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا"/>
     <aya index="3" text="وَقَالَ الْإِنْسَانُ مَا لَهَا"/>
@@ -7,4 +9,4 @@
     <aya index="6" text="يَوْمَئِذٍ يَصْدُرُ النَّاسُ أَشْتَاتًا لِيُرَوْا أَعْمَالَهُمْ"/>
     <aya index="7" text="فَمَنْ يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ"/>
     <aya index="8" text="وَمَنْ يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ"/>
-  </sura></sura>
+  </sura></quran>

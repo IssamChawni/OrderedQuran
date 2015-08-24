@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="64" name="الدخان">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="64" name="الدخان">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="حم"/>
     <aya index="2" text="وَالْكِتَابِ الْمُبِينِ"/>
     <aya index="3" text="إِنَّا أَنْزَلْنَاهُ فِي لَيْلَةٍ مُبَارَكَةٍ ۚ إِنَّا كُنَّا مُنْذِرِينَ"/>
@@ -58,4 +60,4 @@
     <aya index="57" text="فَضْلًا مِنْ رَبِّكَ ۚ ذَٰلِكَ هُوَ الْفَوْزُ الْعَظِيمُ"/>
     <aya index="58" text="فَإِنَّمَا يَسَّرْنَاهُ بِلِسَانِكَ لَعَلَّهُمْ يَتَذَكَّرُونَ"/>
     <aya index="59" text="فَارْتَقِبْ إِنَّهُمْ مُرْتَقِبُونَ"/>
-  </sura></sura>
+  </sura></quran>

@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="17" name="الماعون">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="17" name="الماعون">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ"/>
     <aya index="2" text="فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ"/>
     <aya index="3" text="وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ"/>
@@ -6,4 +8,4 @@
     <aya index="5" text="الَّذِينَ هُمْ عَنْ صَلَاتِهِمْ سَاهُونَ"/>
     <aya index="6" text="الَّذِينَ هُمْ يُرَاءُونَ"/>
     <aya index="7" text="وَيَمْنَعُونَ الْمَاعُونَ"/>
-  </sura></sura>
+  </sura></quran>

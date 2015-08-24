@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="37" name="القمر">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="37" name="القمر">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="اقْتَرَبَتِ السَّاعَةُ وَانْشَقَّ الْقَمَرُ"/>
     <aya index="2" text="وَإِنْ يَرَوْا آيَةً يُعْرِضُوا وَيَقُولُوا سِحْرٌ مُسْتَمِرٌّ"/>
     <aya index="3" text="وَكَذَّبُوا وَاتَّبَعُوا أَهْوَاءَهُمْ ۚ وَكُلُّ أَمْرٍ مُسْتَقِرٌّ"/>
@@ -54,4 +56,4 @@
     <aya index="53" text="وَكُلُّ صَغِيرٍ وَكَبِيرٍ مُسْتَطَرٌ"/>
     <aya index="54" text="إِنَّ الْمُتَّقِينَ فِي جَنَّاتٍ وَنَهَرٍ"/>
     <aya index="55" text="فِي مَقْعَدِ صِدْقٍ عِنْدَ مَلِيكٍ مُقْتَدِرٍ"/>
-  </sura></sura>
+  </sura></quran>

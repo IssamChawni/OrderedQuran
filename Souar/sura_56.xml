@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="56" name="الصافات">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="56" name="الصافات">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالصَّافَّاتِ صَفًّا"/>
     <aya index="2" text="فَالزَّاجِرَاتِ زَجْرًا"/>
     <aya index="3" text="فَالتَّالِيَاتِ ذِكْرًا"/>
@@ -181,4 +183,4 @@
     <aya index="180" text="سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُونَ"/>
     <aya index="181" text="وَسَلَامٌ عَلَى الْمُرْسَلِينَ"/>
     <aya index="182" text="وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"/>
-  </sura></sura>
+  </sura></quran>

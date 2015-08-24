@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="30" name="القارعة">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="30" name="القارعة">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="الْقَارِعَةُ"/>
     <aya index="2" text="مَا الْقَارِعَةُ"/>
     <aya index="3" text="وَمَا أَدْرَاكَ مَا الْقَارِعَةُ"/>
@@ -10,4 +12,4 @@
     <aya index="9" text="فَأُمُّهُ هَاوِيَةٌ"/>
     <aya index="10" text="وَمَا أَدْرَاكَ مَا هِيَهْ"/>
     <aya index="11" text="نَارٌ حَامِيَةٌ"/>
-  </sura></sura>
+  </sura></quran>

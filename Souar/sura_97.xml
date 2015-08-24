@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="97" name="الرحمن">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="97" name="الرحمن">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="الرَّحْمَٰنُ"><rubu index="ثلاثة أرباع الحزب 51"/></aya>
     <aya index="2" text="عَلَّمَ الْقُرْآنَ"/>
     <aya index="3" text="خَلَقَ الْإِنْسَانَ"/>
@@ -77,4 +79,4 @@
     <aya index="76" text="مُتَّكِئِينَ عَلَىٰ رَفْرَفٍ خُضْرٍ وَعَبْقَرِيٍّ حِسَانٍ"/>
     <aya index="77" text="فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ"/>
     <aya index="78" text="تَبَارَكَ اسْمُ رَبِّكَ ذِي الْجَلَالِ وَالْإِكْرَامِ"/>
-  </sura></sura>
+  </sura></quran>

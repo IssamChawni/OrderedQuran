@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="63" name="الزخرف">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="63" name="الزخرف">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="حم"/>
     <aya index="2" text="وَالْكِتَابِ الْمُبِينِ"/>
     <aya index="3" text="إِنَّا جَعَلْنَاهُ قُرْآنًا عَرَبِيًّا لَعَلَّكُمْ تَعْقِلُونَ"/>
@@ -88,4 +90,4 @@
     <aya index="87" text="وَلَئِنْ سَأَلْتَهُمْ مَنْ خَلَقَهُمْ لَيَقُولُنَّ اللَّهُ ۖ فَأَنَّىٰ يُؤْفَكُونَ"/>
     <aya index="88" text="وَقِيلِهِ يَا رَبِّ إِنَّ هَٰؤُلَاءِ قَوْمٌ لَا يُؤْمِنُونَ"/>
     <aya index="89" text="فَاصْفَحْ عَنْهُمْ وَقُلْ سَلَامٌ ۚ فَسَوْفَ يَعْلَمُونَ"/>
-  </sura></sura>
+  </sura></quran>

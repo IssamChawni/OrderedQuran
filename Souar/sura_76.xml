@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="76" name="الطور">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="76" name="الطور">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالطُّورِ"><rubu index="ثلاثة أرباع الحزب 34"/></aya>
     <aya index="2" text="وَكِتَابٍ مَسْطُورٍ"/>
     <aya index="3" text="فِي رَقٍّ مَنْشُورٍ"/>
@@ -48,4 +50,4 @@
     <aya index="47" text="وَإِنَّ لِلَّذِينَ ظَلَمُوا عَذَابًا دُونَ ذَٰلِكَ وَلَٰكِنَّ أَكْثَرَهُمْ لَا يَعْلَمُونَ"/>
     <aya index="48" text="وَاصْبِرْ لِحُكْمِ رَبِّكَ فَإِنَّكَ بِأَعْيُنِنَا ۖ وَسَبِّحْ بِحَمْدِ رَبِّكَ حِينَ تَقُومُ"/>
     <aya index="49" text="وَمِنَ اللَّيْلِ فَسَبِّحْهُ وَإِدْبَارَ النُّجُومِ"/>
-  </sura></sura>
+  </sura></quran>

@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="83" name="الإنشقاق">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="83" name="الإنشقاق">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="إِذَا السَّمَاءُ انْشَقَّتْ"/>
     <aya index="2" text="وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ"/>
     <aya index="3" text="وَإِذَا الْأَرْضُ مُدَّتْ"/>
@@ -24,4 +26,4 @@
     <aya index="23" text="وَاللَّهُ أَعْلَمُ بِمَا يُوعُونَ"/>
     <aya index="24" text="فَبَشِّرْهُمْ بِعَذَابٍ أَلِيمٍ"/>
     <aya index="25" text="إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ"/>
-  </sura></sura>
+  </sura></quran>

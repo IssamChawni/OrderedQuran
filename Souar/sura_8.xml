@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="8" name="الأعلى">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="8" name="الأعلى">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى"><rubu index="ثلاثة أرباع الحزب 1"/></aya>
     <aya index="2" text="الَّذِي خَلَقَ فَسَوَّىٰ"/>
     <aya index="3" text="وَالَّذِي قَدَّرَ فَهَدَىٰ"/>
@@ -18,4 +20,4 @@
     <aya index="17" text="وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ"/>
     <aya index="18" text="إِنَّ هَٰذَا لَفِي الصُّحُفِ الْأُولَىٰ"/>
     <aya index="19" text="صُحُفِ إِبْرَاهِيمَ وَمُوسَىٰ"/>
-  </sura></sura>
+  </sura></quran>

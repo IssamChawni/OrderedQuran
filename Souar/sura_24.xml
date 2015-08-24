@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="24" name="عبس">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="24" name="عبس">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="عَبَسَ وَتَوَلَّىٰ"/>
     <aya index="2" text="أَنْ جَاءَهُ الْأَعْمَىٰ"/>
     <aya index="3" text="وَمَا يُدْرِيكَ لَعَلَّهُ يَزَّكَّىٰ"/>
@@ -41,4 +43,4 @@
     <aya index="40" text="وَوُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ"/>
     <aya index="41" text="تَرْهَقُهَا قَتَرَةٌ"/>
     <aya index="42" text="أُولَٰئِكَ هُمُ الْكَفَرَةُ الْفَجَرَةُ"/>
-  </sura></sura>
+  </sura></quran>

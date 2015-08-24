@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="11" name="الضحى">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="11" name="الضحى">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالضُّحَىٰ"/>
     <aya index="2" text="وَاللَّيْلِ إِذَا سَجَىٰ"/>
     <aya index="3" text="مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ"/>
@@ -10,4 +12,4 @@
     <aya index="9" text="فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ"/>
     <aya index="10" text="وَأَمَّا السَّائِلَ فَلَا تَنْهَرْ"/>
     <aya index="11" text="وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ"/>
-  </sura></sura>
+  </sura></quran>

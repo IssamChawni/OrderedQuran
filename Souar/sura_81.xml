@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="81" name="النازعات">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="81" name="النازعات">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالنَّازِعَاتِ غَرْقًا"/>
     <aya index="2" text="وَالنَّاشِطَاتِ نَشْطًا"/>
     <aya index="3" text="وَالسَّابِحَاتِ سَبْحًا"/>
@@ -45,4 +47,4 @@
     <aya index="44" text="إِلَىٰ رَبِّكَ مُنْتَهَاهَا"/>
     <aya index="45" text="إِنَّمَا أَنْتَ مُنْذِرُ مَنْ يَخْشَاهَا"/>
     <aya index="46" text="كَأَنَّهُمْ يَوْمَ يَرَوْنَهَا لَمْ يَلْبَثُوا إِلَّا عَشِيَّةً أَوْ ضُحَاهَا"/>
-  </sura></sura>
+  </sura></quran>

@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="26" name="الشمس">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="26" name="الشمس">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالشَّمْسِ وَضُحَاهَا"/>
     <aya index="2" text="وَالْقَمَرِ إِذَا تَلَاهَا"/>
     <aya index="3" text="وَالنَّهَارِ إِذَا جَلَّاهَا"/>
@@ -14,4 +16,4 @@
     <aya index="13" text="فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا"/>
     <aya index="14" text="فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُمْ بِذَنْبِهِمْ فَسَوَّاهَا"/>
     <aya index="15" text="وَلَا يَخَافُ عُقْبَاهَا"/>
-  </sura></sura>
+  </sura></quran>

@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="82" name="الإنفطار">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="82" name="الإنفطار">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="إِذَا السَّمَاءُ انْفَطَرَتْ"/>
     <aya index="2" text="وَإِذَا الْكَوَاكِبُ انْتَثَرَتْ"/>
     <aya index="3" text="وَإِذَا الْبِحَارُ فُجِّرَتْ"/>
@@ -18,4 +20,4 @@
     <aya index="17" text="وَمَا أَدْرَاكَ مَا يَوْمُ الدِّينِ"/>
     <aya index="18" text="ثُمَّ مَا أَدْرَاكَ مَا يَوْمُ الدِّينِ"/>
     <aya index="19" text="يَوْمَ لَا تَمْلِكُ نَفْسٌ لِنَفْسٍ شَيْئًا ۖ وَالْأَمْرُ يَوْمَئِذٍ لِلَّهِ"/>
-  </sura></sura>
+  </sura></quran>

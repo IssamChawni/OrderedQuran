@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="14" name="العاديات">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="14" name="العاديات">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالْعَادِيَاتِ ضَبْحًا"/>
     <aya index="2" text="فَالْمُورِيَاتِ قَدْحًا"/>
     <aya index="3" text="فَالْمُغِيرَاتِ صُبْحًا"/>
@@ -10,4 +12,4 @@
     <aya index="9" text="أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِي الْقُبُورِ"/>
     <aya index="10" text="وَحُصِّلَ مَا فِي الصُّدُورِ"/>
     <aya index="11" text="إِنَّ رَبَّهُمْ بِهِمْ يَوْمَئِذٍ لَخَبِيرٌ"/>
-  </sura></sura>
+  </sura></quran>

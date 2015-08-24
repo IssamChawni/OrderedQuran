@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="36" name="الطارق">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="36" name="الطارق">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالسَّمَاءِ وَالطَّارِقِ"/>
     <aya index="2" text="وَمَا أَدْرَاكَ مَا الطَّارِقُ"/>
     <aya index="3" text="النَّجْمُ الثَّاقِبُ"/>
@@ -16,4 +18,4 @@
     <aya index="15" text="إِنَّهُمْ يَكِيدُونَ كَيْدًا"/>
     <aya index="16" text="وَأَكِيدُ كَيْدًا"/>
     <aya index="17" text="فَمَهِّلِ الْكَافِرِينَ أَمْهِلْهُمْ رُوَيْدًا"/>
-  </sura></sura>
+  </sura></quran>

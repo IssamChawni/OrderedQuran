@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="23" name="النجم">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="23" name="النجم">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالنَّجْمِ إِذَا هَوَىٰ"/>
     <aya index="2" text="مَا ضَلَّ صَاحِبُكُمْ وَمَا غَوَىٰ"/>
     <aya index="3" text="وَمَا يَنْطِقُ عَنِ الْهَوَىٰ"/>
@@ -61,4 +63,4 @@
     <aya index="60" text="وَتَضْحَكُونَ وَلَا تَبْكُونَ"/>
     <aya index="61" text="وَأَنْتُمْ سَامِدُونَ"/>
     <aya index="62" text="فَاسْجُدُوا لِلَّهِ وَاعْبُدُوا ۩"/>
-  </sura></sura>
+  </sura></quran>

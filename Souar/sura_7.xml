@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="7" name="التكوير">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="7" name="التكوير">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="إِذَا الشَّمْسُ كُوِّرَتْ"/>
     <aya index="2" text="وَإِذَا النُّجُومُ انْكَدَرَتْ"/>
     <aya index="3" text="وَإِذَا الْجِبَالُ سُيِّرَتْ"/>
@@ -28,4 +30,4 @@
     <aya index="27" text="إِنْ هُوَ إِلَّا ذِكْرٌ لِلْعَالَمِينَ"/>
     <aya index="28" text="لِمَنْ شَاءَ مِنْكُمْ أَنْ يَسْتَقِيمَ"/>
     <aya index="29" text="وَمَا تَشَاءُونَ إِلَّا أَنْ يَشَاءَ اللَّهُ رَبُّ الْعَالَمِينَ"/>
-  </sura></sura>
+  </sura></quran>

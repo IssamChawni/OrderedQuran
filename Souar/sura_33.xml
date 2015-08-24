@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="33" name="المرسلات">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="33" name="المرسلات">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَالْمُرْسَلَاتِ عُرْفًا"/>
     <aya index="2" text="فَالْعَاصِفَاتِ عَصْفًا"/>
     <aya index="3" text="وَالنَّاشِرَاتِ نَشْرًا"/>
@@ -49,4 +51,4 @@
     <aya index="48" text="وَإِذَا قِيلَ لَهُمُ ارْكَعُوا لَا يَرْكَعُونَ"/>
     <aya index="49" text="وَيْلٌ يَوْمَئِذٍ لِلْمُكَذِّبِينَ"/>
     <aya index="50" text="فَبِأَيِّ حَدِيثٍ بَعْدَهُ يُؤْمِنُونَ"/>
-  </sura></sura>
+  </sura></quran>

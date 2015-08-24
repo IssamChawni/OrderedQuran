@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="9" name="الليل">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="9" name="الليل">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="وَاللَّيْلِ إِذَا يَغْشَىٰ"/>
     <aya index="2" text="وَالنَّهَارِ إِذَا تَجَلَّىٰ"/>
     <aya index="3" text="وَمَا خَلَقَ الذَّكَرَ وَالْأُنْثَىٰ"/>
@@ -20,4 +22,4 @@
     <aya index="19" text="وَمَا لِأَحَدٍ عِنْدَهُ مِنْ نِعْمَةٍ تُجْزَىٰ"/>
     <aya index="20" text="إِلَّا ابْتِغَاءَ وَجْهِ رَبِّهِ الْأَعْلَىٰ"/>
     <aya index="21" text="وَلَسَوْفَ يَرْضَىٰ"/>
-  </sura></sura>
+  </sura></quran>

@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="4" name="المدثر">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="4" name="المدثر">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="يَا أَيُّهَا الْمُدَّثِّرُ"/>
     <aya index="2" text="قُمْ فَأَنْذِرْ"/>
     <aya index="3" text="وَرَبَّكَ فَكَبِّرْ"/>
@@ -55,4 +57,4 @@
     <aya index="54" text="كَلَّا إِنَّهُ تَذْكِرَةٌ"/>
     <aya index="55" text="فَمَنْ شَاءَ ذَكَرَهُ"/>
     <aya index="56" text="وَمَا يَذْكُرُونَ إِلَّا أَنْ يَشَاءَ اللَّهُ ۚ هُوَ أَهْلُ التَّقْوَىٰ وَأَهْلُ الْمَغْفِرَةِ"/>
-  </sura></sura>
+  </sura></quran>

@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="38" name="ص">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="38" name="ص">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="ص ۚ وَالْقُرْآنِ ذِي الذِّكْرِ"/>
     <aya index="2" text="بَلِ الَّذِينَ كَفَرُوا فِي عِزَّةٍ وَشِقَاقٍ"/>
     <aya index="3" text="كَمْ أَهْلَكْنَا مِنْ قَبْلِهِمْ مِنْ قَرْنٍ فَنَادَوْا وَلَاتَ حِينَ مَنَاصٍ"/>
@@ -87,4 +89,4 @@
     <aya index="86" text="قُلْ مَا أَسْأَلُكُمْ عَلَيْهِ مِنْ أَجْرٍ وَمَا أَنَا مِنَ الْمُتَكَلِّفِينَ"/>
     <aya index="87" text="إِنْ هُوَ إِلَّا ذِكْرٌ لِلْعَالَمِينَ"/>
     <aya index="88" text="وَلَتَعْلَمُنَّ نَبَأَهُ بَعْدَ حِينٍ"/>
-  </sura></sura>
+  </sura></quran>

@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="22" name="الإخلاص">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="22" name="الإخلاص">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="قُلْ هُوَ اللَّهُ أَحَدٌ"/>
     <aya index="2" text="اللَّهُ الصَّمَدُ"/>
     <aya index="3" text="لَمْ يَلِدْ وَلَمْ يُولَدْ"/>
     <aya index="4" text="وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ"/>
-  </sura></sura>
+  </sura></quran>

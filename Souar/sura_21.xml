@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="21" name="الناس">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="21" name="الناس">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="قُلْ أَعُوذُ بِرَبِّ النَّاسِ"/>
     <aya index="2" text="مَلِكِ النَّاسِ"/>
     <aya index="3" text="إِلَٰهِ النَّاسِ"/>
     <aya index="4" text="مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ"/>
     <aya index="5" text="الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ"/>
     <aya index="6" text="مِنَ الْجِنَّةِ وَالنَّاسِ"/>
-  </sura></sura>
+  </sura></quran>

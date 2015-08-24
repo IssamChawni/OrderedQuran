@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="41" name="يس">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="41" name="يس">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="يس"><hizb index=" الحزب 7"/></aya>
     <aya index="2" text="وَالْقُرْآنِ الْحَكِيمِ"/>
     <aya index="3" text="إِنَّكَ لَمِنَ الْمُرْسَلِينَ"/>
@@ -82,4 +84,4 @@
     <aya index="81" text="أَوَلَيْسَ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ بِقَادِرٍ عَلَىٰ أَنْ يَخْلُقَ مِثْلَهُمْ ۚ بَلَىٰ وَهُوَ الْخَلَّاقُ الْعَلِيمُ"/>
     <aya index="82" text="إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَنْ يَقُولَ لَهُ كُنْ فَيَكُونُ"/>
     <aya index="83" text="فَسُبْحَانَ الَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ وَإِلَيْهِ تُرْجَعُونَ"/>
-  </sura></sura>
+  </sura></quran>

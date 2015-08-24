@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><quran><sura index="1" name="العلق">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="1" name="العلق">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ">
     	<hizb index=" الحزب 1"/>
     </aya>	

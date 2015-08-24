@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><sura><sura index="78" name="الحاقة">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./quran-to-html.xsl" ?>
+<quran><sura index="78" name="الحاقة">
     <aya bismillah="بِسمِ اللَّهِ الرَّحمٰنِ الرَّحيمِ" index="1" text="الْحَاقَّةُ"><rubu index="ربع الحزب 35"/></aya>
     <aya index="2" text="مَا الْحَاقَّةُ"/>
     <aya index="3" text="وَمَا أَدْرَاكَ مَا الْحَاقَّةُ"/>
@@ -51,4 +53,4 @@
     <aya index="50" text="وَإِنَّهُ لَحَسْرَةٌ عَلَى الْكَافِرِينَ"/>
     <aya index="51" text="وَإِنَّهُ لَحَقُّ الْيَقِينِ"/>
     <aya index="52" text="فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيمِ"/>
-  </sura></sura>
+  </sura></quran>
