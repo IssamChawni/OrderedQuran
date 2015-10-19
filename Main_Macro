@@ -53,6 +53,16 @@ Sub Filter_4()
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=26, Criteria1:="Pas d'acteur"
 End Sub
 
+Sub Filter_5()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
+End Sub
+
+Sub Filter_7()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="<>"
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
+End Sub
+
     Sub Create_Sheet_2(Sheet_Name As String, Week_Name As String)
 
     Cells.Select
@@ -122,7 +132,53 @@ End Sub
     
     End Sub
     
-Sub main_2()
+    Sub Create_Sheet_5(Sheet_Name As String, Week_Name As String)
+
+    Cells.Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_5
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("5 Montant total GDC OK et ventilation non effectuée")
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
+    Sub Create_Sheet_7(Sheet_Name As String, Week_Name As String)
+
+    Cells.Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_7
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("7 Montant total GDC OK et ventilation effectuée par l’encaissement")
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
+    Sub main_2()
 
 Sheets(1).Select
 Call Create_Sheet_2("Mnt_total_ventiler_SEM_39", "SEM 39")
@@ -152,12 +208,32 @@ Call Create_Sheet_4("Mnt_total_GDC_etude_SEM_42", "SEM 42")
 
 End Sub
 
-Sub main()
+Sub main_5()
 
-Call main_2
+Sheets(1).Select
+Call Create_Sheet_5("GDC_OK_ven_non_effectuee_SEM_39", "SEM 39 côté encaissement")
 
-Call main_3
+Sheets(2).Select
+Call Create_Sheet_5("GDC_OK_ven_non_effectuee_SEM_42", "SEM 42 côté encaissement")
 
-Call main_4
+End Sub
+
+Sub main_7()
+
+Sheets(1).Select
+Call Create_Sheet_7("gdc_ok_et_vento_ok_sem_39", "SEM 39")
+
+Sheets(2).Select
+Call Create_Sheet_7("gdc_ok_et_vento_ok_sem_42", "SEM 42")
+
+End Sub
+
+Sub main_bis()
+
+Sheets(1).Select
+Call Create_Sheet_4("Mnt_total_GDC_etude_SEM_39", "SEM 39")
+
+Sheets(2).Select
+Call Create_Sheet_4("Mnt_total_GDC_etude_SEM_42", "SEM 42")
 
 End Sub
