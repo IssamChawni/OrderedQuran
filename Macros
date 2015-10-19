@@ -1,0 +1,79 @@
+Sub Macro1()
+'
+' Macro1 Macro
+'
+
+'
+    Cells.Select
+    Selection.Copy
+    Dim ws As Worksheet
+    With ThisWorkbook
+        Set ws = .Sheets.Add(After:=.Sheets(.Sheets.Count))
+        ws.Name = "Delegataire"
+    End With
+    ActiveSheet.Paste
+    
+    Rows("1:1").Select
+    Selection.AutoFilter
+    ActiveSheet.Range("$A$1:$AM$165").AutoFilter Field:=34, Criteria1:="="
+    ActiveWindow.LargeScroll ToRight:=-1
+    Columns("B:B").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "Semaine"
+    
+    Dim N As Integer
+      ' Set numrows = number of rows of data.
+      NumRows = Range("A2", Range("A2").End(xlDown)).Rows.Count
+      ' Select cell a1.
+      Range("A2").Select
+      ' Establish "For" loop to loop "numrows" number of times.
+      For N = 2 To NumRows + 1
+        Dim rCell As String
+        rCell = Cells(N, "A")
+         If (rCell = "GEFI") Then
+            Cells(N, "B").FormulaR1C1 = "SEM 39"
+        End If
+         ActiveCell.Offset(1, 0).Select
+      Next
+    Columns("A:A").Select
+    Selection.Replace What:="GEFI", Replacement:="Replacement ", LookAt:= _
+        xlWhole, SearchOrder:=xlByRows, MatchCase:=True, SearchFormat:=False, _
+        ReplaceFormat:=False
+End Sub
+Sub Macro3()
+'
+' Macro3 Macro
+'
+
+'
+    Rows("1:1").Select
+    Selection.AutoFilter
+    Selection.Find(What:="ventilation", After:=ActiveCell, LookIn:=xlFormulas _
+        , LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
+        MatchCase:=False, SearchFormat:=False).Activate
+    Selection.FindNext(After:=ActiveCell).Activate
+    ActiveSheet.Range("$A$1:$AM$165").AutoFilter Field:=35, Criteria1:="="
+    ActiveWindow.SmallScroll ToRight:=-3
+    ActiveSheet.Range("$A$1:$AM$165").AutoFilter Field:=26, Criteria1:="ADV"
+    
+    ActiveWindow.LargeScroll ToRight:=-1
+    Columns("B:B").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "Semaine"
+    Dim N As Integer
+      ' Set numrows = number of rows of data.
+      NumRows = Range("A2", Range("A2").End(xlDown)).Rows.Count
+      ' Select cell a1.
+      Range("A2").Select
+      ' Establish "For" loop to loop "numrows" number of times.
+      For N = 2 To NumRows
+        Dim rCell As String
+        rCell = Cells(N, "A")
+         If (rCell = "GEFI") Then
+            Cells(N, "B").FormulaR1C1 = "SEM 39"
+        End If
+         ActiveCell.Offset(1, 0).Select
+      Next
+End Sub
