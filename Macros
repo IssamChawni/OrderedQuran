@@ -77,3 +77,17 @@ Sub Macro3()
          ActiveCell.Offset(1, 0).Select
       Next
 End Sub
+
+Sub Macro4()
+Dim message, title As String
+Dim myValue As String
+' Set prompt.
+message = "Enter a name of a delegataire: "
+' Set title.
+title = "Delegataire: "
+
+' Display message, title, and default value.
+myValue = InputBox(message, title, "")
+
+ActiveSheet.Range("$A$1:$AM$6834").AutoFilter Field:=1, Criteria1:=myValue
+End Sub
