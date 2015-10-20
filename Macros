@@ -298,20 +298,30 @@ End Sub
 Sub launch()
 
 Call main("SEM 39", "SEM 42")
+Call Copy_without_header
 
 End Sub
+
 Sub Copy_without_header()
 
     Sheets(1).Activate
+    
     Rows("1:1").Select
     Selection.Copy
-    Sheets(3).Activate
-    Cell("A1").Activate
-    ActiveSheet.Paste
-    Sheets(1).Activate
-    ActiveSheet.UsedRange.Offset(1, 0).SpecialCells _
-    (xlCellTypeVisible).Copy
-    Sheets(3).Activate
+    
+    Call Create_Sheet("Stats")
+    
     ActiveSheet.Paste
     
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    'Sheets(1).Activate
+    'ActiveSheet.UsedRange.Offset(1, 0).SpecialCells _
+    '(xlCellTypeVisible).Copy
+    'Sheets(3).Activate
+    'ActiveSheet.Paste
+    
 End Sub
+
+
