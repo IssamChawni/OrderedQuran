@@ -1,93 +1,244 @@
-Sub Macro1()
-'
-' Macro1 Macro
-'
-
-'
-    Cells.Select
-    Selection.Copy
-    Dim ws As Worksheet
+Sub Create_Sheet(name As String)
+Dim ws As Worksheet
     With ThisWorkbook
-        Set ws = .Sheets.Add(After:=.Sheets(.Sheets.Count))
-        ws.Name = "Delegataire"
+        Set ws1 = .Sheets.Add(After:=.Sheets(.Sheets.Count))
+        ws1.name = name
     End With
-    ActiveSheet.Paste
-    
-    Rows("1:1").Select
-    Selection.AutoFilter
-    ActiveSheet.Range("$A$1:$AM$165").AutoFilter Field:=34, Criteria1:="="
-    ActiveWindow.LargeScroll ToRight:=-1
+End Sub
+
+Sub Inserer_Colonne_Semaine()
     Columns("B:B").Select
     Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
-    Range("B1").Select
     ActiveCell.FormulaR1C1 = "Semaine"
-    
-    Dim N As Integer
-      ' Set numrows = number of rows of data.
+    Columns("B:B").Select
+    Range("B2").Activate
+End Sub
+
+Sub Replace_Delegataire(Montant As String)
+    Columns("A:A").Select
+    Selection.Replace What:="GEFI", Replacement:=Montant, LookAt:= _
+        xlWhole, SearchOrder:=xlByColumns, MatchCase:=True
+End Sub
+
+Sub Fill_Semaine(sem As String)
+
+Dim N As Integer
       NumRows = Range("A2", Range("A2").End(xlDown)).Rows.Count
-      ' Select cell a1.
       Range("A2").Select
-      ' Establish "For" loop to loop "numrows" number of times.
       For N = 2 To NumRows + 1
         Dim rCell As String
         rCell = Cells(N, "A")
          If (rCell = "GEFI") Then
-            Cells(N, "B").FormulaR1C1 = "SEM 39"
+            Cells(N, "B").FormulaR1C1 = sem
         End If
          ActiveCell.Offset(1, 0).Select
       Next
-    Columns("A:A").Select
-    Selection.Replace What:="GEFI", Replacement:="Replacement ", LookAt:= _
-        xlWhole, SearchOrder:=xlByRows, MatchCase:=True, SearchFormat:=False, _
-        ReplaceFormat:=False
-End Sub
-Sub Macro3()
-'
-' Macro3 Macro
-'
 
-'
+End Sub
+
+Sub Filter_2()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
+End Sub
+    
+Sub Filter_3()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=26, Criteria1:="ADV"
+End Sub
+
+Sub Filter_4()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=26, Criteria1:="Pas d'acteur"
+End Sub
+
+Sub Filter_5()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
+End Sub
+
+Sub Filter_7()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="<>"
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
+End Sub
+
+    Sub Create_Sheet_2(Sheet_Name As String, Week_Name As String)
+
+    Cells.Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
     Rows("1:1").Select
     Selection.AutoFilter
-    Selection.Find(What:="ventilation", After:=ActiveCell, LookIn:=xlFormulas _
-        , LookAt:=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, _
-        MatchCase:=False, SearchFormat:=False).Activate
-    Selection.FindNext(After:=ActiveCell).Activate
-    ActiveSheet.Range("$A$1:$AM$165").AutoFilter Field:=35, Criteria1:="="
-    ActiveWindow.SmallScroll ToRight:=-3
-    ActiveSheet.Range("$A$1:$AM$165").AutoFilter Field:=26, Criteria1:="ADV"
     
-    ActiveWindow.LargeScroll ToRight:=-1
-    Columns("B:B").Select
-    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
-    Range("B1").Select
-    ActiveCell.FormulaR1C1 = "Semaine"
-    Dim N As Integer
-      ' Set numrows = number of rows of data.
-      NumRows = Range("A2", Range("A2").End(xlDown)).Rows.Count
-      ' Select cell a1.
-      Range("A2").Select
-      ' Establish "For" loop to loop "numrows" number of times.
-      For N = 2 To NumRows
-        Dim rCell As String
-        rCell = Cells(N, "A")
-         If (rCell = "GEFI") Then
-            Cells(N, "B").FormulaR1C1 = "SEM 39"
-        End If
-         ActiveCell.Offset(1, 0).Select
-      Next
+    Call Filter_2
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("2 Montant total Web à ventiler")
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
+    Sub Create_Sheet_3(Sheet_Name As String, Week_Name As String)
+
+    Cells.Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_3
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("3 Montant total GDC en cours")
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
+    Sub Create_Sheet_4(Sheet_Name As String, Week_Name As String)
+
+    Cells.Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_4
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("4 Montant total GDC à   étudier")
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
+    Sub Create_Sheet_5(Sheet_Name As String, Week_Name As String)
+
+    Cells.Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_5
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("5 Montant total GDC OK et ventilation non effectuée")
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
+    Sub Create_Sheet_7(Sheet_Name As String, Week_Name As String)
+
+    Cells.Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_7
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("7 Montant total GDC OK et ventilation effectuée par l’encaissement")
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
+Sub main_2(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_2("montant total web " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_2("montant total web " + semaine_2, semaine_2)
+
 End Sub
 
-Sub Macro4()
-Dim message, title As String
-Dim myValue As String
-' Set prompt.
-message = "Enter a name of a delegataire: "
-' Set title.
-title = "Delegataire: "
+Sub main_3(semaine_1 As String, semaine_2 As String)
 
-' Display message, title, and default value.
-myValue = InputBox(message, title, "")
+Sheets(1).Select
+Call Create_Sheet_3("gdc en cours " + semaine_1, semaine_1)
 
-ActiveSheet.Range("$A$1:$AM$6834").AutoFilter Field:=1, Criteria1:=myValue
+Sheets(2).Select
+Call Create_Sheet_3("gdc en cours " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main_4(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_4("total gdc a etudier " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_4("total gdc a etudier " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main_5(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_5("gdc ok et venti pas ok " + semaine_1, semaine_1 + " côté encaissement")
+
+Sheets(2).Select
+Call Create_Sheet_5("gdc ok et venti pas ok " + semaine_2, semaine_2 + " côté encaissement")
+
+End Sub
+
+Sub main_7(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_7("gdc ok et vento ok " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_7("gdc ok et vento ok " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main(semaine_1 As String, semaine_2 As String)
+
+Call main_2(semaine_1, semaine_2)
+Call main_3(semaine_1, semaine_2)
+Call main_4(semaine_1, semaine_2)
+Call main_5(semaine_1, semaine_2)
+Call main_7(semaine_1, semaine_2)
+
+End Sub
+
+Sub launch()
+
+Call main("SEM 39", "SEM 42")
+
 End Sub
