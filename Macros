@@ -61,6 +61,24 @@ Sub Filter_7()
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="<>"
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
 End Sub
+    
+    Sub Create_Sheet_1(Sheet_Name As String, Week_Name As String)
+
+    Rows("1:1").Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    
+    Call Inserer_Colonne_Semaine
+     
+    Cells(2, "A").FormulaR1C1 = "1 Montant total CAGE"
+    Cells(2, "B").FormulaR1C1 = Week_Name
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
 
     Sub Create_Sheet_2(Sheet_Name As String, Week_Name As String)
 
@@ -154,6 +172,24 @@ End Sub
     
     End Sub
     
+    Sub Create_Sheet_6(Sheet_Name As String, Week_Name As String)
+
+    Rows("1:1").Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    
+    Call Inserer_Colonne_Semaine
+     
+    Cells(2, "A").FormulaR1C1 = "6 Montant total à étudier par l'encaissement (CAGE pas dans web)"
+    Cells(2, "B").FormulaR1C1 = Week_Name
+    
+    Columns("A:A").EntireColumn.AutoFit
+    
+    End Sub
+    
     Sub Create_Sheet_7(Sheet_Name As String, Week_Name As String)
 
     Cells.Select
@@ -177,6 +213,16 @@ End Sub
     
     End Sub
     
+Sub main_1(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_1("montant total cage " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_1("montant total cage " + semaine_2, semaine_2)
+
+End Sub
+
 Sub main_2(semaine_1 As String, semaine_2 As String)
 
 Sheets(1).Select
@@ -217,6 +263,16 @@ Call Create_Sheet_5("gdc ok et venti pas ok " + semaine_2, semaine_2 + " côté 
 
 End Sub
 
+Sub main_6(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_6("total a etudier cage " + semaine_1, semaine_1 + " côté encaissement")
+
+Sheets(2).Select
+Call Create_Sheet_6("total a etudier cage " + semaine_2, semaine_2 + " côté encaissement")
+
+End Sub
+
 Sub main_7(semaine_1 As String, semaine_2 As String)
 
 Sheets(1).Select
@@ -229,10 +285,12 @@ End Sub
 
 Sub main(semaine_1 As String, semaine_2 As String)
 
+Call main_1(semaine_1, semaine_2)
 Call main_2(semaine_1, semaine_2)
 Call main_3(semaine_1, semaine_2)
 Call main_4(semaine_1, semaine_2)
 Call main_5(semaine_1, semaine_2)
+Call main_6(semaine_1, semaine_2)
 Call main_7(semaine_1, semaine_2)
 
 End Sub
@@ -241,4 +299,19 @@ Sub launch()
 
 Call main("SEM 39", "SEM 42")
 
+End Sub
+Sub Copy_without_header()
+
+    Sheets(1).Activate
+    Rows("1:1").Select
+    Selection.Copy
+    Sheets(3).Activate
+    Cell("A1").Activate
+    ActiveSheet.Paste
+    Sheets(1).Activate
+    ActiveSheet.UsedRange.Offset(1, 0).SpecialCells _
+    (xlCellTypeVisible).Copy
+    Sheets(3).Activate
+    ActiveSheet.Paste
+    
 End Sub
