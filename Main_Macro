@@ -1,4 +1,3 @@
-
 Sub Create_Sheet(name As String)
 Dim ws As Worksheet
     With ThisWorkbook
@@ -178,62 +177,68 @@ End Sub
     
     End Sub
     
-    Sub main_2()
+Sub main_2(semaine_1 As String, semaine_2 As String)
 
 Sheets(1).Select
-Call Create_Sheet_2("Mnt_total_ventiler_SEM_39", "SEM 39")
+Call Create_Sheet_2("montant total web " + semaine_1, semaine_1)
 
 Sheets(2).Select
-Call Create_Sheet_2("Mnt_total_ventiler_SEM_42", "SEM 42")
+Call Create_Sheet_2("montant total web " + semaine_2, semaine_2)
 
 End Sub
 
-Sub main_3()
+Sub main_3(semaine_1 As String, semaine_2 As String)
 
 Sheets(1).Select
-Call Create_Sheet_3("Mnt_total_GDC_cours_SEM 39", "SEM 39")
+Call Create_Sheet_3("gdc en cours " + semaine_1, semaine_1)
 
 Sheets(2).Select
-Call Create_Sheet_3("Mnt_total_GDC_cours_SEM 42", "SEM 42")
+Call Create_Sheet_3("gdc en cours " + semaine_2, semaine_2)
 
 End Sub
 
-Sub main_4()
+Sub main_4(semaine_1 As String, semaine_2 As String)
 
 Sheets(1).Select
-Call Create_Sheet_4("Mnt_total_GDC_etude_SEM_39", "SEM 39")
+Call Create_Sheet_4("total gdc a etudier " + semaine_1, semaine_1)
 
 Sheets(2).Select
-Call Create_Sheet_4("Mnt_total_GDC_etude_SEM_42", "SEM 42")
+Call Create_Sheet_4("total gdc a etudier " + semaine_2, semaine_2)
 
 End Sub
 
-Sub main_5()
+Sub main_5(semaine_1 As String, semaine_2 As String)
 
 Sheets(1).Select
-Call Create_Sheet_5("GDC_OK_ven_non_effectuee_SEM_39", "SEM 39 côté encaissement")
+Call Create_Sheet_5("gdc ok et venti pas ok " + semaine_1, semaine_1)
 
 Sheets(2).Select
-Call Create_Sheet_5("GDC_OK_ven_non_effectuee_SEM_42", "SEM 42 côté encaissement")
+Call Create_Sheet_5("gdc ok et venti pas ok " + semaine_2, semaine_2)
 
 End Sub
 
-Sub main_7()
+Sub main_7(semaine_1 As String, semaine_2 As String)
 
 Sheets(1).Select
-Call Create_Sheet_7("gdc_ok_et_vento_ok_sem_39", "SEM 39")
+Call Create_Sheet_7("gdc ok et vento ok " + semaine_1, semaine_1)
 
 Sheets(2).Select
-Call Create_Sheet_7("gdc_ok_et_vento_ok_sem_42", "SEM 42")
+Call Create_Sheet_7("gdc ok et vento ok " + semaine_2, semaine_2)
 
 End Sub
 
-Sub main_bis()
+Sub main(semaine_1 As String, semaine_2 As String)
 
-Sheets(1).Select
-Call Create_Sheet_4("Mnt_total_GDC_etude_SEM_39", "SEM 39")
+Call main_2(semaine_1, semaine_2)
+Call main_3(semaine_1, semaine_2)
+Call main_4(semaine_1, semaine_2)
+Call main_5(semaine_1, semaine_2)
+Call main_7(semaine_1, semaine_2)
 
-Sheets(2).Select
-Call Create_Sheet_4("Mnt_total_GDC_etude_SEM_42", "SEM 42")
+End Sub
+
+Sub launch()
+
+Call main("SEM 39", "SEM 42")
 
 End Sub
