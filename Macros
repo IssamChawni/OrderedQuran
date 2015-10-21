@@ -79,7 +79,8 @@ End Sub
 
     Sub Create_Sheet_2(Sheet_Name As String, Week_Name As String)
 
-    Cells.Select
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     Selection.Copy
     
     Call Create_Sheet(Sheet_Name)
@@ -100,7 +101,8 @@ End Sub
     
     Sub Create_Sheet_3(Sheet_Name As String, Week_Name As String)
 
-    Cells.Select
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     Selection.Copy
     
     Call Create_Sheet(Sheet_Name)
@@ -121,7 +123,8 @@ End Sub
     
     Sub Create_Sheet_4(Sheet_Name As String, Week_Name As String)
 
-    Cells.Select
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     Selection.Copy
     
     Call Create_Sheet(Sheet_Name)
@@ -142,7 +145,8 @@ End Sub
     
     Sub Create_Sheet_5(Sheet_Name As String, Week_Name As String)
 
-    Cells.Select
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     Selection.Copy
     
     Call Create_Sheet(Sheet_Name)
@@ -179,7 +183,8 @@ End Sub
     
     Sub Create_Sheet_7(Sheet_Name As String, Week_Name As String)
 
-    Cells.Select
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     Selection.Copy
     
     Call Create_Sheet(Sheet_Name)
