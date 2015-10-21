@@ -1,23 +1,23 @@
+
 Sub Create_Sheet(name As String)
 Dim ws As Worksheet
     With ThisWorkbook
-        Set ws1 = .Sheets.Add(After:=.Sheets(.Sheets.Count))
-        ws1.name = name
+        Set ws = .Sheets.Add(After:=.Sheets(.Sheets.Count))
+        ws.name = name
     End With
+Set ws = Nothing
 End Sub
 
 Sub Inserer_Colonne_Semaine()
     Columns("B:B").Select
-    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Selection.Insert Shift:=xlToRight
     ActiveCell.FormulaR1C1 = "Semaine"
-    Columns("B:B").Select
-    Range("B2").Activate
 End Sub
 
 Sub Replace_Delegataire(Montant As String)
     Columns("A:A").Select
     Selection.Replace What:="GEFI", Replacement:=Montant, LookAt:= _
-        xlWhole, SearchOrder:=xlByColumns, MatchCase:=True
+        xlWhole, MatchCase:=True
 End Sub
 
 Sub Fill_Semaine(sem As String)
@@ -33,7 +33,6 @@ Dim N As Integer
         End If
          ActiveCell.Offset(1, 0).Select
       Next
-
 End Sub
 
 Sub Filter_2()
@@ -76,8 +75,6 @@ End Sub
     Cells(2, "A").FormulaR1C1 = "1 Montant total CAGE"
     Cells(2, "B").FormulaR1C1 = Week_Name
     
-    Columns("A:A").EntireColumn.AutoFit
-    
     End Sub
 
     Sub Create_Sheet_2(Sheet_Name As String, Week_Name As String)
@@ -98,8 +95,6 @@ End Sub
     Call Fill_Semaine(Week_Name)
       
     Call Replace_Delegataire("2 Montant total Web à ventiler")
-    
-    Columns("A:A").EntireColumn.AutoFit
     
     End Sub
     
@@ -122,8 +117,6 @@ End Sub
       
     Call Replace_Delegataire("3 Montant total GDC en cours")
     
-    Columns("A:A").EntireColumn.AutoFit
-    
     End Sub
     
     Sub Create_Sheet_4(Sheet_Name As String, Week_Name As String)
@@ -144,8 +137,6 @@ End Sub
     Call Fill_Semaine(Week_Name)
       
     Call Replace_Delegataire("4 Montant total GDC à   étudier")
-    
-    Columns("A:A").EntireColumn.AutoFit
     
     End Sub
     
@@ -168,8 +159,6 @@ End Sub
       
     Call Replace_Delegataire("5 Montant total GDC OK et ventilation non effectuée")
     
-    Columns("A:A").EntireColumn.AutoFit
-    
     End Sub
     
     Sub Create_Sheet_6(Sheet_Name As String, Week_Name As String)
@@ -185,8 +174,6 @@ End Sub
      
     Cells(2, "A").FormulaR1C1 = "6 Montant total à étudier par l'encaissement (CAGE pas dans web)"
     Cells(2, "B").FormulaR1C1 = Week_Name
-    
-    Columns("A:A").EntireColumn.AutoFit
     
     End Sub
     
@@ -208,8 +195,6 @@ End Sub
     Call Fill_Semaine(Week_Name)
       
     Call Replace_Delegataire("7 Montant total GDC OK et ventilation effectuée par l’encaissement")
-    
-    Columns("A:A").EntireColumn.AutoFit
     
     End Sub
     
@@ -296,10 +281,8 @@ Call main_7(semaine_1, semaine_2)
 End Sub
 
 Sub launch()
-
 Call main("SEM 39", "SEM 42")
 Call Copy_without_header
-
 End Sub
 
 Sub Copy_without_header()
@@ -323,5 +306,4 @@ Sub Copy_without_header()
     'ActiveSheet.Paste
     
 End Sub
-
 
