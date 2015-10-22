@@ -325,3 +325,35 @@ Selection.Copy Destination:=Sheets("Stats").Range("A65536").End(xlUp)(2)
 Next
 
 End Sub
+
+Sub Pivot()
+'
+' PT Macro
+'
+
+'
+    Call Create_Sheet("Pivot")
+    ActiveWorkbook.PivotCaches.Create(SourceType:=xlDatabase, SourceData:= _
+        "Stats!R1C1:R381C40", Version:=xlPivotTableVersion12).CreatePivotTable _
+        TableDestination:="Pivot!R3C1", TableName:="PivotTable2", DefaultVersion _
+        :=xlPivotTableVersion12
+    Sheets("Pivot").Select
+    Cells(3, 1).Select
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Délégataire")
+        .Orientation = xlRowField
+        .Position = 1
+    End With
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Semaine")
+        .Orientation = xlColumnField
+        .Position = 1
+    End With
+    ActiveSheet.PivotTables("PivotTable2").AddDataField ActiveSheet.PivotTables( _
+        "PivotTable2").PivotFields("Montant_non_ventile"), _
+        "Count of Montant_non_ventile", xlCount
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields( _
+        "Count of Montant_non_ventile")
+        .Caption = "Sum of Montant_non_ventile"
+        .Function = xlSum
+    End With
+End Sub
+
