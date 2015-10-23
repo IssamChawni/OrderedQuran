@@ -1,5 +1,5 @@
 
-Sub Create_Sheet(name As String)
+Private Sub Create_Sheet(name As String)
 Dim ws As Worksheet
     With ThisWorkbook
         Set ws = .Sheets.Add(After:=.Sheets(.Sheets.Count))
@@ -8,7 +8,7 @@ Dim ws As Worksheet
 Set ws = Nothing
 End Sub
 
-Sub Inserer_Colonne_Semaine()
+Private Sub Inserer_Colonne_Semaine()
     Columns("B:B").Select
     Selection.Insert Shift:=xlToRight
     ActiveCell.FormulaR1C1 = "Semaine"
@@ -35,28 +35,28 @@ Dim N As Integer
       Next
 End Sub
 
-Sub Filter_2()
+Private Sub Filter_2()
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
 End Sub
     
-Sub Filter_3()
+Private Sub Filter_3()
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=26, Criteria1:="ADV"
 End Sub
 
-Sub Filter_4()
+Private Sub Filter_4()
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=26, Criteria1:="Pas d'acteur"
 End Sub
 
-Sub Filter_5()
+Private Sub Filter_5()
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
 End Sub
 
-Sub Filter_7()
+Private Sub Filter_7()
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="<>"
     ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
 End Sub
@@ -285,14 +285,9 @@ Call main_7(semaine_1, semaine_2)
 
 End Sub
 
-Sub launch()
-Call main("SEM 39", "SEM 42")
-Call Copy_without_header
-End Sub
+Private Sub Copy_without_header()
 
-Sub Copy_without_header()
-
-    Sheets(1).Activate
+    Sheets(3).Activate
     
     Rows("1:1").Select
     Selection.Copy
@@ -304,15 +299,10 @@ Sub Copy_without_header()
     Rows("1:1").Select
     Selection.AutoFilter
     
-    'Sheets(1).Activate
-    'ActiveSheet.UsedRange.Offset(1, 0).SpecialCells _
-    '(xlCellTypeVisible).Copy
-    'Sheets(3).Activate
-    'ActiveSheet.Paste
     
 End Sub
 
-Sub Combine()
+Private Sub Combine()
 
 Dim J As Integer
 On Error Resume Next
@@ -326,7 +316,7 @@ Next
 
 End Sub
 
-Sub Pivot()
+Private Sub Pivot()
 '
 ' PT Macro
 '
@@ -357,3 +347,12 @@ Sub Pivot()
     End With
 End Sub
 
+Sub Launch()
+Call main("SEM 39", "SEM 42")
+Call Copy_without_header
+End Sub
+
+Sub Calculate()
+Call Combine
+Call Pivot
+End Sub
