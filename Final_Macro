@@ -1,0 +1,373 @@
+Private Sub Create_Sheet(name As String)
+Dim ws As Worksheet
+    With ThisWorkbook
+        Set ws = .Sheets.Add(After:=.Sheets(.Sheets.Count))
+        ws.name = name
+    End With
+Set ws = Nothing
+End Sub
+
+Private Sub Inserer_Colonne_Semaine()
+    Columns("B:B").Select
+    Selection.Insert Shift:=xlToRight
+    ActiveCell.FormulaR1C1 = "Semaine"
+End Sub
+
+Sub Replace_Delegataire(Montant As String)
+    Columns("A:A").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("A:A").Select
+    Selection.Insert Shift:=xlToRight
+    ActiveCell.FormulaR1C1 = "Délégataire"
+    Dim N As Integer
+      NumRows = Range("B2", Range("B2").End(xlDown)).Rows.Count
+      Range("B2").Select
+      For N = 2 To NumRows + 1
+        Cells(N, "A").FormulaR1C1 = Montant
+        ActiveCell.Offset(1, 0).Select
+      Next
+End Sub
+
+Sub Fill_Semaine(sem As String)
+
+Dim N As Integer
+      NumRows = Range("A2", Range("A2").End(xlDown)).Rows.Count
+      Range("A2").Select
+      For N = 2 To NumRows + 1
+        Dim rCell As String
+        rCell = Cells(N, "A")
+         If (rCell = "GEFI") Then
+            Cells(N, "B").FormulaR1C1 = sem
+        End If
+         ActiveCell.Offset(1, 0).Select
+      Next
+End Sub
+
+Private Sub Filter_2()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+End Sub
+    
+Private Sub Filter_3()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=26, Criteria1:="ADV"
+End Sub
+
+Private Sub Filter_4()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=26, Criteria1:="Pas d'acteur"
+End Sub
+
+Private Sub Filter_5()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="="
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
+End Sub
+
+Private Sub Filter_7()
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=35, Criteria1:="<>"
+    ActiveSheet.Range("$A$1:$AM$163").AutoFilter Field:=34, Criteria1:="<>"
+End Sub
+    
+    Sub Create_Sheet_1(Sheet_Name As String, Week_Name As String)
+
+    Rows("1:1").Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    
+    Call Inserer_Colonne_Semaine
+     
+    Cells(2, "A").FormulaR1C1 = "1 Montant total CAGE"
+    Cells(2, "B").FormulaR1C1 = Week_Name
+    
+    End Sub
+
+    Sub Create_Sheet_2(Sheet_Name As String, Week_Name As String)
+
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_2
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("2 Montant total Web à ventiler")
+    
+    End Sub
+    
+    Sub Create_Sheet_3(Sheet_Name As String, Week_Name As String)
+
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_3
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("3 Montant total GDC en cours")
+    
+    End Sub
+    
+    Sub Create_Sheet_4(Sheet_Name As String, Week_Name As String)
+
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_4
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("4 Montant total GDC à   étudier")
+    
+    End Sub
+    
+    Sub Create_Sheet_5(Sheet_Name As String, Week_Name As String)
+
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_5
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("5 Montant total GDC OK et ventilation non effectuée")
+    
+    End Sub
+    
+    Sub Create_Sheet_6(Sheet_Name As String, Week_Name As String)
+
+    Rows("1:1").Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    
+    Call Inserer_Colonne_Semaine
+     
+    Cells(2, "A").FormulaR1C1 = "6 Montant total à étudier par l'encaissement (CAGE pas dans web)"
+    Cells(2, "B").FormulaR1C1 = Week_Name
+    
+    End Sub
+    
+    Sub Create_Sheet_7(Sheet_Name As String, Week_Name As String)
+
+    Range("A1").Select
+    Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
+    Selection.Copy
+    
+    Call Create_Sheet(Sheet_Name)
+    
+    ActiveSheet.Paste
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    Call Filter_7
+    
+    Call Inserer_Colonne_Semaine
+     
+    Call Fill_Semaine(Week_Name)
+      
+    Call Replace_Delegataire("7 Montant total GDC OK et ventilation effectuée par l’encaissement")
+    
+    End Sub
+    
+Sub main_1(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_1("montant total cage " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_1("montant total cage " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main_2(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_2("montant total web " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_2("montant total web " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main_3(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_3("gdc en cours " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_3("gdc en cours " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main_4(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_4("total gdc a etudier " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_4("total gdc a etudier " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main_5(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_5("gdc ok et venti pas ok " + semaine_1, semaine_1 + " côté encaissement")
+
+Sheets(2).Select
+Call Create_Sheet_5("gdc ok et venti pas ok " + semaine_2, semaine_2 + " côté encaissement")
+
+End Sub
+
+Sub main_6(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_6("total a etudier cage " + semaine_1, semaine_1 + " côté encaissement")
+
+Sheets(2).Select
+Call Create_Sheet_6("total a etudier cage " + semaine_2, semaine_2 + " côté encaissement")
+
+End Sub
+
+Sub main_7(semaine_1 As String, semaine_2 As String)
+
+Sheets(1).Select
+Call Create_Sheet_7("gdc ok et vento ok " + semaine_1, semaine_1)
+
+Sheets(2).Select
+Call Create_Sheet_7("gdc ok et vento ok " + semaine_2, semaine_2)
+
+End Sub
+
+Sub main(semaine_1 As String, semaine_2 As String)
+
+Call main_1(semaine_1, semaine_2)
+Call main_2(semaine_1, semaine_2)
+Call main_3(semaine_1, semaine_2)
+Call main_4(semaine_1, semaine_2)
+Call main_5(semaine_1, semaine_2)
+Call main_6(semaine_1, semaine_2)
+Call main_7(semaine_1, semaine_2)
+
+End Sub
+
+Private Sub Copy_without_header()
+
+    Sheets(3).Activate
+    
+    Rows("1:1").Select
+    Selection.Copy
+    
+    Call Create_Sheet("Stats")
+    
+    ActiveSheet.Paste
+    
+    Rows("1:1").Select
+    Selection.AutoFilter
+    
+    
+End Sub
+
+Private Sub Combine()
+
+Dim J As Integer
+On Error Resume Next
+For J = 3 To 16
+Sheets(J).Activate
+Range("A1").Select
+Selection.CurrentRegion.Select
+Selection.Offset(1, 0).Resize(Selection.Rows.Count - 1).Select
+Selection.Copy Destination:=Sheets("Stats").Range("A65536").End(xlUp)(2)
+Next
+
+End Sub
+
+Private Sub Pivot()
+'
+' PT Macro
+'
+
+'
+    Call Create_Sheet("Pivot")
+    ActiveWorkbook.PivotCaches.Create(SourceType:=xlDatabase, SourceData:= _
+        "Stats!R1C1:R381C40", Version:=xlPivotTableVersion12).CreatePivotTable _
+        TableDestination:="Pivot!R3C1", TableName:="PivotTable2", DefaultVersion _
+        :=xlPivotTableVersion12
+    Sheets("Pivot").Select
+    Cells(3, 1).Select
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Délégataire")
+        .Orientation = xlRowField
+        .Position = 1
+    End With
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Semaine")
+        .Orientation = xlColumnField
+        .Position = 1
+    End With
+    ActiveSheet.PivotTables("PivotTable2").AddDataField ActiveSheet.PivotTables( _
+        "PivotTable2").PivotFields("Montant_non_ventile"), _
+        "Count of Montant_non_ventile", xlCount
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields( _
+        "Count of Montant_non_ventile")
+        .Caption = "Sum of Montant_non_ventile"
+        .Function = xlSum
+    End With
+End Sub
+
+Sub Launch()
+
+Dim sem_1, sem_2 As String
+
+sem_1 = InputBox("Enter the number of the first week: ", "First week", "")
+sem_2 = InputBox("Enter the number of the second week: ", "Second week", "")
+
+Call main("SEM " + sem_1, "SEM " + sem_2)
+Call Copy_without_header
+
+End Sub
+
+Sub Calculate()
+Call Combine
+Call Pivot
+End Sub
