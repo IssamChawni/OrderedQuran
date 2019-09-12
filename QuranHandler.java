@@ -35,5 +35,4 @@ public class QuranHandler extends DefaultHandler {
         	else { rubu = rubu +1;}
         }
     }
-
 }    
